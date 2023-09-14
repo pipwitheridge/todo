@@ -22,7 +22,7 @@ const add = () => {
   // Function to add the task via API request
   const handleAddTask = (e) => {
     e.preventDefault();
-    fetch("http://localhost:3000/api", {
+    fetch("http://127.0.0.1:3000/api", {
       method: "POST",
       body: JSON.stringify({ task: task }),
       headers: {

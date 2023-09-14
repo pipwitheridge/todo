@@ -25,7 +25,7 @@ const TodoList = () => {
   };
 
   // Fetch the task data from the API when the component is rendered
-  fetch("http://localhost:3000/api", {
+  fetch("http://127.0.0.1:3000/api", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -38,7 +38,7 @@ const TodoList = () => {
 
   // Function to handle task editing
   const handleEdit = () => {
-    fetch("http://localhost:3000/api", {
+    fetch("http://127.0.0.1:3000/api", {
       method: "PATCH",
       body: JSON.stringify({ id: selectedTask.id, task: task }),
       headers: {
@@ -52,7 +52,7 @@ const TodoList = () => {
 
   // Function to handle task deletion
   const handleDelete = (id) => {
-    fetch("http://localhost:3000/api", {
+    fetch("http://127.0.0.1:3000/api", {
       method: "DELETE",
       body: JSON.stringify({ id: id }),
       headers: {
